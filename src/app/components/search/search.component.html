@@ -1,0 +1,13 @@
+<div class="row mt-4">
+    <div class="col">
+        <input #termino type="text" (keydown.enter)="busqueda(termino.value)" class="form-control" placeholder="buscar">
+    </div>
+</div>
+
+<div class="row mt-5">
+    <div class="col">
+        <div class="card-columns">
+            <app-tarjeta [pelicula]="pelicula" [pagina]="'search'" *ngFor="let pelicula of peliculasService.peliculas"></app-tarjeta>
+        </div>
+    </div>
+</div>

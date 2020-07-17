@@ -1,0 +1,10 @@
+<div class="card">
+    <img [src]="pelicula.backdrop_path | noimage" class="card-img-top" [alt]="pelicula.title">
+    <div class="card-body">
+      <h5 class="card-title">{{ pelicula.title }}</h5>
+      <p class="card-text">{{ pelicula.overview | slice: 0 :100 }}...</p>
+      <button (click)="verMas()" type="button" class="btn btn-outline-primary btn-block">
+        ver más...
+      </button>
+    </div>
+</div>
